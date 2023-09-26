@@ -7,8 +7,6 @@ from Tool import ts_check,bar_checker,convert_date
 from twilio.rest import Client
 from os import environ
 
-
-print(str(environ.get("Web_socket_Api")))
 # SMS Configuration 
 account_sid = str(environ.get('account_sid'))
 auth_token = str(environ.get('auth_token'))

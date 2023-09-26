@@ -2,10 +2,11 @@ import ApiConfig
 from datetime import datetime
 import pytz
 from twilio.rest import Client
+from os import environ
 
 # SMS Configuration 
-account_sid = 'AC4769a5c2b9176a0419ed2c27f96d5e39'
-auth_token = 'ef484f8fff592f160144c1b93c8bd949'
+account_sid = str(environ.get('account_sid'))
+auth_token = str(environ.get('auth_token'))
 client = Client(account_sid, auth_token)
 # Api Config 
 indice = ApiConfig.ApiAccess()
